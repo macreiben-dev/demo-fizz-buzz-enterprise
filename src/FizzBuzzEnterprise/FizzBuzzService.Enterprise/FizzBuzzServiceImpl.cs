@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzzService.Enterprise;
 
-public class FizzBuzzServiceImpl
+public class FizzBuzzServiceImpl : IFizzBuzzServiceImpl
 {
     public string Compute(int requestOriginal)
     {

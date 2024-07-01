@@ -5,12 +5,12 @@ using NFluent;
 
 namespace FizzBuzzService.Enterprise.Tests;
 
-public class UnitTest1
+public class MediaTrSpecificsTests
 {
     private readonly ServiceProvider _service;
     private readonly IMediator _mediator;
 
-    public UnitTest1()
+    public MediaTrSpecificsTests()
     {
         ServiceCollection collection = new ServiceCollection();
 
