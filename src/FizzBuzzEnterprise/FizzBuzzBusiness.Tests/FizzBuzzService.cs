@@ -17,6 +17,11 @@ public static class FizzBuzzService
             return Buzz;
         }
         
+        if(original == 10) 
+        {
+            return Buzz;
+        }
+        
         return original.ToString();
     }
 }

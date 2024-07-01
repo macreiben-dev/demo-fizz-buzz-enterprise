@@ -9,7 +9,8 @@ public class FizzBuzzServiceTests
     [InlineData(1)]
     [InlineData(2)]
     [InlineData(4)]
-
+    [InlineData(7)]
+    [InlineData(8)]
     public void GIVEN_number_THEN_return_number_as_string(int original)
     {
         var result = FizzBuzzService.Compute(original);
@@ -17,21 +18,12 @@ public class FizzBuzzServiceTests
         Check.That(result).IsEqualTo(original.ToString());
     }
     
-    [Fact]
-    public void GIVEN_3_THEN_Fizz()
+    [Theory]
+    [InlineData(3)]
+    [InlineData(6)]
+    [InlineData(9)]
+    public void GIVEN_divisible_by_3_THEN_return_Fizz(int original)
     {
-        var original = 3;
-
-        var result = FizzBuzzService.Compute(original);
-
-        Check.That(result).IsEqualTo("Fizz");
-    }
-    
-    [Fact]
-    public void GIVEN_6_THEN_Fizz()
-    {
-        var original = 6;
-
         var result = FizzBuzzService.Compute(original);
 
         Check.That(result).IsEqualTo("Fizz");
@@ -47,4 +39,13 @@ public class FizzBuzzServiceTests
         Check.That(result).IsEqualTo("Buzz");
     }
 
+    [Fact]
+    public void GIVEN_10_THEN_Buzz()
+    {
+        var original = 10;
+
+        var result = FizzBuzzService.Compute(original);
+
+        Check.That(result).IsEqualTo("Buzz");
+    }
 }
