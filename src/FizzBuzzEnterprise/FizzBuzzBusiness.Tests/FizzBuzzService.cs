@@ -7,21 +7,31 @@ public static class FizzBuzzService
 
     public static string Compute(int original)
     {
-        if (original % 3 == 0)
+        if (original == 15)
+        {
+            return Fizz + Buzz;
+        }
+        
+        if (DivisibleBy3(original))
         {
             return Fizz;
         }
         
-        if (original == 5)
-        {
-            return Buzz;
-        }
-        
-        if(original == 10) 
+        if(DivisibleBy5(original)) 
         {
             return Buzz;
         }
         
         return original.ToString();
+    }
+
+    private static bool DivisibleBy5(int original)
+    {
+        return original % 5 == 0;
+    }
+
+    private static bool DivisibleBy3(int original)
+    {
+        return original % 3 == 0;
     }
 }

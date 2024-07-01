@@ -29,23 +29,21 @@ public class FizzBuzzServiceTests
         Check.That(result).IsEqualTo("Fizz");
     }
     
-    [Fact]
-    public void GIVEN_5_THEN_Buzz()
+    [Theory]
+    [InlineData(5)]
+    [InlineData(10)]
+    public void GIVEN_divisible_by_5_THEN_return_Buzz(int original)
     {
-        var original = 5;
-
         var result = FizzBuzzService.Compute(original);
 
         Check.That(result).IsEqualTo("Buzz");
     }
-
+    
     [Fact]
-    public void GIVEN_10_THEN_Buzz()
+    public void GIVEN_15_THEN_return_FizzBuzz()
     {
-        var original = 10;
+        var result = FizzBuzzService.Compute(15);
 
-        var result = FizzBuzzService.Compute(original);
-
-        Check.That(result).IsEqualTo("Buzz");
+        Check.That(result).IsEqualTo("FizzBuzz");
     }
 }
