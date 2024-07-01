@@ -4,6 +4,10 @@ namespace FizzBuzzBusiness.Tests;
 
 public class FizzBuzzServiceTests
 {
+    private const string Fizz = "Fizz";
+    private const string Buzz = "Buzz";
+    private const string FizzBuzz = "FizzBuzz";
+
     [Theory]
     [InlineData(1)]
     [InlineData(2)]
@@ -25,7 +29,7 @@ public class FizzBuzzServiceTests
     {
         var result = FizzBuzzService.Compute(original);
 
-        Check.That(result).IsEqualTo("Fizz");
+        Check.That(result).IsEqualTo(Fizz);
     }
     
     [Theory]
@@ -35,7 +39,7 @@ public class FizzBuzzServiceTests
     {
         var result = FizzBuzzService.Compute(original);
 
-        Check.That(result).IsEqualTo("Buzz");
+        Check.That(result).IsEqualTo(Buzz);
     }
     
     [Theory]
@@ -46,6 +50,6 @@ public class FizzBuzzServiceTests
     {
         var result = FizzBuzzService.Compute(original);
 
-        Check.That(result).IsEqualTo("FizzBuzz");
+        Check.That(result).IsEqualTo(FizzBuzz);
     }
 }
