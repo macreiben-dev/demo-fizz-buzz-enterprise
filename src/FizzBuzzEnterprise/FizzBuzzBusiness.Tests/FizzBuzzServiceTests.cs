@@ -42,7 +42,8 @@ public class FizzBuzzServiceTests
     [Theory]
     [InlineData(15)]
     [InlineData(30)]
-    public void GIVEN_divisible_by_3_and_5_THEN_return_FizzBuzz(int original)
+    public void GIVEN_divisible_by_3_and_5_THEN_return_FizzBuzz(
+        int original)
     {
         var result = FizzBuzzService.Compute(original);
 
