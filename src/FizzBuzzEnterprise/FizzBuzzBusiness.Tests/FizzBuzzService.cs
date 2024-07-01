@@ -7,16 +7,11 @@ public static class FizzBuzzService
 
     public static string Compute(int original)
     {
-        if (original == 3 * 1)
+        if (original % 3 == 0)
         {
             return Fizz;
         }
         
-        if (original == 3 * 2)
-        {
-            return Fizz;
-        }
-
         if (original == 5)
         {
             return Buzz;
