@@ -39,10 +39,12 @@ public class FizzBuzzServiceTests
         Check.That(result).IsEqualTo("Buzz");
     }
     
-    [Fact]
-    public void GIVEN_15_THEN_return_FizzBuzz()
+    [Theory]
+    [InlineData(15)]
+    [InlineData(30)]
+    public void GIVEN_divisible_by_3_and_5_THEN_return_FizzBuzz(int original)
     {
-        var result = FizzBuzzService.Compute(15);
+        var result = FizzBuzzService.Compute(original);
 
         Check.That(result).IsEqualTo("FizzBuzz");
     }

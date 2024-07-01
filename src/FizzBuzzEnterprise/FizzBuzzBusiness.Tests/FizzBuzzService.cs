@@ -4,12 +4,13 @@ public static class FizzBuzzService
 {
     private const string Fizz = "Fizz";
     private const string Buzz = "Buzz";
+    private const string FizzBuzz = Fizz + Buzz;
 
     public static string Compute(int original)
     {
-        if (original == 15)
+        if(DivisibleBy3(original) && DivisibleBy5(original))
         {
-            return Fizz + Buzz;
+            return FizzBuzz;
         }
         
         if (DivisibleBy3(original))
