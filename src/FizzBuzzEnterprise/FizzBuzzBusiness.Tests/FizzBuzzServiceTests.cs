@@ -8,6 +8,8 @@ public class FizzBuzzServiceTests
     [Theory]
     [InlineData(1)]
     [InlineData(2)]
+    [InlineData(4)]
+
     public void GIVEN_number_THEN_return_number_as_string(int original)
     {
         var result = FizzBuzzService.Compute(original);
@@ -23,5 +25,15 @@ public class FizzBuzzServiceTests
         var result = FizzBuzzService.Compute(original);
 
         Check.That(result).IsEqualTo("Fizz");
+    }
+    
+    [Fact]
+    public void GIVEN_5_THEN_Buzz()
+    {
+        var original = 5;
+
+        var result = FizzBuzzService.Compute(original);
+
+        Check.That(result).IsEqualTo("Buzz");
     }
 }
