@@ -18,10 +18,10 @@ public class UnitTest1
     [Fact]
     public void GIVEN_2_THEN_2()
     {
-        var original = 1;
+        var original = 2;
 
-        var result = "1";
+        var result = "2";
 
-        Check.That(result).IsEqualTo("1");
+        Check.That(result).IsEqualTo("2");
     }
 }
