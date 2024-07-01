@@ -1,4 +1,4 @@
-namespace FizzBuzzBusiness.Tests;
+namespace FizzBuzzBusiness;
 
 public static class FizzBuzzService
 {
