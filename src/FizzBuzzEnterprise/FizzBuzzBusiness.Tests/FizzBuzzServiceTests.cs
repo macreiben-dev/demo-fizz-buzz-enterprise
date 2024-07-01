@@ -28,16 +28,6 @@ public class FizzBuzzServiceTests
     }
     
     [Fact]
-    public void GIVEN_5_THEN_Buzz()
-    {
-        var original = 5;
-
-        var result = FizzBuzzService.Compute(original);
-
-        Check.That(result).IsEqualTo("Buzz");
-    }
-    
-    [Fact]
     public void GIVEN_6_THEN_Fizz()
     {
         var original = 6;
@@ -46,4 +36,15 @@ public class FizzBuzzServiceTests
 
         Check.That(result).IsEqualTo("Fizz");
     }
+    
+    [Fact]
+    public void GIVEN_5_THEN_Buzz()
+    {
+        var original = 5;
+
+        var result = FizzBuzzService.Compute(original);
+
+        Check.That(result).IsEqualTo("Buzz");
+    }
+
 }
