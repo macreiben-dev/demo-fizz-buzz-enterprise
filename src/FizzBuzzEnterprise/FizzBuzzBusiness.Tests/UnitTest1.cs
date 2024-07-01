@@ -10,7 +10,7 @@ public class UnitTest1
     {
         var original = 1;
 
-        var result = "1";
+        var result = original.ToString();
 
         Check.That(result).IsEqualTo("1");
     }
@@ -20,7 +20,7 @@ public class UnitTest1
     {
         var original = 2;
 
-        var result = "2";
+        var result = original.ToString();
 
         Check.That(result).IsEqualTo("2");
     }
