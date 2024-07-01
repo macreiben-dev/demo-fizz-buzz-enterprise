@@ -3,7 +3,7 @@ using NFluent;
 
 namespace FizzBuzzBusiness.Tests;
 
-public class UnitTest1
+public class FizzBuzzServiceTests
 {
     [Fact]
     public void GIVEN_1_THEN_1()
