@@ -5,24 +5,14 @@ namespace FizzBuzzBusiness.Tests;
 
 public class FizzBuzzServiceTests
 {
-    [Fact]
-    public void GIVEN_1_THEN_1()
+    [Theory]
+    [InlineData(1)]
+    [InlineData(2)]
+    public void GIVEN_number_THEN_return_number_as_string(int original)
     {
-        var original = 1;
-
         var result = FizzBuzzService.Compute(original);
 
-        Check.That(result).IsEqualTo("1");
-    }
-    
-    [Fact]
-    public void GIVEN_2_THEN_2()
-    {
-        var original = 2;
-
-        var result = FizzBuzzService.Compute(original);
-
-        Check.That(result).IsEqualTo("2");
+        Check.That(result).IsEqualTo(original.ToString());
     }
     
     [Fact]
