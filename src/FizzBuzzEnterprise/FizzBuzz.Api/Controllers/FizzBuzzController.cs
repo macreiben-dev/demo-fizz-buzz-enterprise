@@ -16,7 +16,8 @@ public class FizzBuzzController
     }
     
     [HttpGet]
-    public string Get([FromQuery] int n)
+    [Route("compute/{n}")]
+    public string Get(int n)
     {
         var actual = _mediator.Send(new FizzBuzzRequest(n)).Result;
 
