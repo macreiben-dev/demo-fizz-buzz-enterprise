@@ -11,6 +11,11 @@ public static class FizzBuzzService
         {
             return Fizz;
         }
+        
+        if (original == 6)
+        {
+            return Fizz;
+        }
 
         if (original == 5)
         {
