@@ -10,18 +10,25 @@ public class UnitTest1
     {
         var original = 1;
 
-        var result = original.ToString();
+        var result = Compute(original);
 
         Check.That(result).IsEqualTo("1");
     }
-    
+
+
     [Fact]
     public void GIVEN_2_THEN_2()
     {
         var original = 2;
 
-        var result = original.ToString();
+        var result = Compute(original);
 
         Check.That(result).IsEqualTo("2");
+    }
+    
+    
+    private static string Compute(int original)
+    {
+        return original.ToString();
     }
 }
