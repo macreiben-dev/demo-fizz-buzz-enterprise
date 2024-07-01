@@ -10,25 +10,18 @@ public class UnitTest1
     {
         var original = 1;
 
-        var result = Compute(original);
+        var result = FizzBuzzService.Compute(original);
 
         Check.That(result).IsEqualTo("1");
     }
-
-
+    
     [Fact]
     public void GIVEN_2_THEN_2()
     {
         var original = 2;
 
-        var result = Compute(original);
+        var result = FizzBuzzService.Compute(original);
 
         Check.That(result).IsEqualTo("2");
-    }
-    
-    
-    private static string Compute(int original)
-    {
-        return original.ToString();
     }
 }
