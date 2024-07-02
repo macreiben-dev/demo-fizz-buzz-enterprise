@@ -1,4 +1,5 @@
 using FizzBuzzBusiness.Domain.Contracts;
+using FizzBuzzService.Enterprise.MediaTRSpecifics;
 using NFluent;
 using NSubstitute;
 
@@ -24,7 +25,7 @@ public class FizzBuzzServiceContainerTest
         _fizzBuzzService.ComputeFizzBuzz(1)
             .Returns("that alright");
 
-        var actual = GetTarget().Compute(1);
+        var actual = GetTarget().Compute(new FizzBuzzRequest(1));
 
         Check.That(actual).IsEqualTo("that alright");
     }

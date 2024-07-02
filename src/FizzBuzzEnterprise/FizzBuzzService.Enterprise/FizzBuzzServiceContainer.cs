@@ -1,4 +1,5 @@
 ﻿using FizzBuzzBusiness.Domain.Contracts;
+using FizzBuzzService.Enterprise.MediaTRSpecifics;
 
 namespace FizzBuzzService.Enterprise;
 
@@ -11,8 +12,8 @@ public class FizzBuzzServiceContainer : IFizzBuzzServiceContainer
         _fizzBuzzService = fizzBuzzService;
     }
 
-    public string Compute(int requestOriginal)
+    public string Compute(FizzBuzzRequest requestOriginal)
     {
-        return _fizzBuzzService.ComputeFizzBuzz(requestOriginal);
+        return _fizzBuzzService.ComputeFizzBuzz(requestOriginal.Original);
     }
 }

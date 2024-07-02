@@ -13,7 +13,7 @@ public class FizzBuzzRequestHandler : IRequestHandler<FizzBuzzRequest, string>
     
     public Task<string> Handle(FizzBuzzRequest request, CancellationToken cancellationToken)
     {
-       var actual = _fizzBuzzService.Compute(request.Original);
+       var actual = _fizzBuzzService.Compute(request);
 
        return Task.FromResult(actual);
     }

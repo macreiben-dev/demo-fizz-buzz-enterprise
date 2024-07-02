@@ -1,6 +1,8 @@
+using FizzBuzzService.Enterprise.MediaTRSpecifics;
+
 namespace FizzBuzzService.Enterprise;
 
 public interface IFizzBuzzServiceContainer 
 {
-    string Compute(int requestOriginal);
+    string Compute(FizzBuzzRequest requestOriginal);
 }
