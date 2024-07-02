@@ -1,6 +1,4 @@
-using FizzBuzzService.Enterprise;
-
-namespace FizzBuzz.Api.Tests;
+namespace FizzBuzzService.Enterprise.Tests;
 
 public class FakeFizzBuzzContainer : IFizzBuzzServiceContainer
 {

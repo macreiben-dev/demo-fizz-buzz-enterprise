@@ -7,27 +7,29 @@ namespace FizzBuzzService.Enterprise.Tests;
 
 public class MediaTrSpecificsTests
 {
-    private readonly IMediator _mediator;
+    private readonly ServiceProvider _serviceProvider;
 
     public MediaTrSpecificsTests()
     {
-        ServiceCollection collection = new ServiceCollection();
+        ServiceCollection services = new();
 
-        collection.AddMediatR(
+        services.AddMediatR(
             cfg => cfg.RegisterServicesFromAssembly(typeof(FizzBuzzServiceContainer).Assembly));
 
-        collection.AddScoped<IFizzBuzzServiceContainer, FizzBuzzServiceContainer>();
-        
-        var service = collection.BuildServiceProvider();
-        
-        _mediator = service.GetRequiredService<IMediator>();
-    }
+        services.AddScoped<IFizzBuzzServiceContainer, FakeFizzBuzzContainer>();
 
+        _serviceProvider = services.BuildServiceProvider();
+    }
+    
     [Fact]
-    public void GIVEN_1_AND_event_sent_THEN_1()
+    public async Task THEN_should_invoke_fizzbuzz_service_container()
     {
-        var actual = _mediator.Send(new FizzBuzzRequest(1)).Result;
-        
-        Check.That(actual).IsEqualTo("1");
+        // ACT
+        var target = _serviceProvider.GetService<IMediator>();
+
+        var actual = await target.Send(new FizzBuzzRequest(1));
+
+        // ASSERT
+        Check.That(actual).IsEqualTo("that's a fake!");
     }
 }
