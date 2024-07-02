@@ -20,9 +20,9 @@ The trick is, you instanciate request - aka events - that you pass to the Mediat
 
 #### Hiding code smell with structural complexity
 
-This way, by breaking Dependency inversion principle in the process, one cannot see the controller dependency.
+This way, by breaking Dependency inversion principle in the process, one cannot see the controller dependency. You have to look for what handler handles what request.
 
-... and we can happily have a monolithic controller that does everything because we cannot see what the actual dependency are, we have no reason anymore to split code :P. 
+... and we can happily have a monolithic controller that does everything because we cannot see what the actual dependency are. But the best is that we do not have any reason anymore to split code anymore :P. 
 
 That what the mediator design pattern do, it regroup the communication complexity in one place - but was no supposed to hide it.
 
