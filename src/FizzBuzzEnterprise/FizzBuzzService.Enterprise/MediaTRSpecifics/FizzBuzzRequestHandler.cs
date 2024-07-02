@@ -4,9 +4,9 @@ namespace FizzBuzzService.Enterprise.MediaTRSpecifics;
 
 public class FizzBuzzRequestHandler : IRequestHandler<FizzBuzzRequest, string>
 {
-    private readonly IFizzBuzzServiceImpl _fizzBuzzService;
+    private readonly IFizzBuzzServiceContainer _fizzBuzzService;
 
-    public FizzBuzzRequestHandler(IFizzBuzzServiceImpl fizzBuzzService)
+    public FizzBuzzRequestHandler(IFizzBuzzServiceContainer fizzBuzzService)
     {
         _fizzBuzzService = fizzBuzzService;
     }

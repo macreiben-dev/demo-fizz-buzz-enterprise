@@ -7,8 +7,8 @@ public static class ServicesConfiguration
     public static void Configure(IServiceCollection builderServices)
     {
         builderServices.AddMediatR(
-            cfg => cfg.RegisterServicesFromAssembly(typeof(FizzBuzzServiceImpl).Assembly));
+            cfg => cfg.RegisterServicesFromAssembly(typeof(FizzBuzzServiceContainer).Assembly));
 
-        builderServices.AddScoped<IFizzBuzzServiceImpl, FizzBuzzServiceImpl>();
+        builderServices.AddScoped<IFizzBuzzServiceContainer, FizzBuzzServiceContainer>();
     }
 }

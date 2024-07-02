@@ -7,7 +7,6 @@ namespace FizzBuzzService.Enterprise.Tests;
 
 public class MediaTrSpecificsTests
 {
-    private readonly ServiceProvider _service;
     private readonly IMediator _mediator;
 
     public MediaTrSpecificsTests()
@@ -15,13 +14,13 @@ public class MediaTrSpecificsTests
         ServiceCollection collection = new ServiceCollection();
 
         collection.AddMediatR(
-            cfg => cfg.RegisterServicesFromAssembly(typeof(FizzBuzzServiceImpl).Assembly));
+            cfg => cfg.RegisterServicesFromAssembly(typeof(FizzBuzzServiceContainer).Assembly));
 
-        collection.AddScoped<FizzBuzzServiceImpl>();
+        collection.AddScoped<IFizzBuzzServiceContainer, FizzBuzzServiceContainer>();
         
-        _service = collection.BuildServiceProvider();
+        var service = collection.BuildServiceProvider();
         
-        _mediator = _service.GetRequiredService<IMediator>();
+        _mediator = service.GetRequiredService<IMediator>();
     }
 
     [Fact]
