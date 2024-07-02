@@ -2,14 +2,15 @@ using FizzBuzzService.Enterprise.MediaTRSpecifics;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using NFluent;
+using Xunit;
 
-namespace FizzBuzzService.Enterprise.Tests;
+namespace FizzBuzzService.Enterprise.Integration.Tests;
 
-public class MediaTrSpecificsTests
+public class MediatorAndRequestHandlerIntegrationTest
 {
     private readonly ServiceProvider _serviceProvider;
 
-    public MediaTrSpecificsTests()
+    public MediatorAndRequestHandlerIntegrationTest()
     {
         ServiceCollection services = new();
 

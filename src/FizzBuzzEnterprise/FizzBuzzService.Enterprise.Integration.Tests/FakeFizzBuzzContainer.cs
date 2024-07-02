@@ -1,4 +1,4 @@
-namespace FizzBuzzService.Enterprise.Tests;
+namespace FizzBuzzService.Enterprise.Integration.Tests;
 
 public class FakeFizzBuzzContainer : IFizzBuzzServiceContainer
 {

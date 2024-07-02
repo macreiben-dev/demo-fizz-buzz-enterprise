@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz.Api.Tests", "FizzB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzBusiness.Domain.Contracts", "FizzBuzzBusiness.Domain.Contracts\FizzBuzzBusiness.Domain.Contracts.csproj", "{EBF21A2C-A59A-463D-925A-8A8BD9225C70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzService.Enterprise.Integration.Tests", "FizzBuzzService.Enterprise.Integration.Tests\FizzBuzzService.Enterprise.Integration.Tests.csproj", "{29E3210B-70B2-4291-B677-0271AF35078D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{EBF21A2C-A59A-463D-925A-8A8BD9225C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBF21A2C-A59A-463D-925A-8A8BD9225C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBF21A2C-A59A-463D-925A-8A8BD9225C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E3210B-70B2-4291-B677-0271AF35078D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E3210B-70B2-4291-B677-0271AF35078D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E3210B-70B2-4291-B677-0271AF35078D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E3210B-70B2-4291-B677-0271AF35078D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E718933F-09B4-4083-8A7A-44D89F0D4222} = {D0D99785-03C3-436F-8574-55638D9CD495}
@@ -59,5 +65,6 @@ Global
 		{2F1730F6-548A-4DC5-8F3A-6B48A6C5E01D} = {15A25693-848D-4AB5-B99B-505A68C85043}
 		{7482907A-BC9E-4C84-B77E-4C86DB4AA516} = {15A25693-848D-4AB5-B99B-505A68C85043}
 		{EBF21A2C-A59A-463D-925A-8A8BD9225C70} = {D0D99785-03C3-436F-8574-55638D9CD495}
+		{29E3210B-70B2-4291-B677-0271AF35078D} = {15A25693-848D-4AB5-B99B-505A68C85043}
 	EndGlobalSection
 EndGlobal
