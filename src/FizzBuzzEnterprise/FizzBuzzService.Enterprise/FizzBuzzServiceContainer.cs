@@ -14,6 +14,9 @@ public class FizzBuzzServiceContainer : IFizzBuzzServiceContainer
 
     public string Compute(FizzBuzzRequest requestOriginal)
     {
+        /**
+         * This class could be removed if there is no code to bootstrap the service.
+         */
         return _fizzBuzzService.ComputeFizzBuzz(requestOriginal.Original);
     }
 }
