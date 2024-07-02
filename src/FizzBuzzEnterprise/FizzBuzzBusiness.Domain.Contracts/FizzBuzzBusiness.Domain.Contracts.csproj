@@ -4,11 +4,6 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>FizzBuzzBusiness</RootNamespace>
     </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\FizzBuzzBusiness.Domain.Contracts\FizzBuzzBusiness.Domain.Contracts.csproj" />
-    </ItemGroup>
 
 </Project>

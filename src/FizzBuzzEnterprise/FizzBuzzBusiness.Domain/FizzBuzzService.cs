@@ -1,12 +1,19 @@
+using FizzBuzzBusiness.Domain.Contracts;
+
 namespace FizzBuzzBusiness;
 
-public static class FizzBuzzService
+public class FizzBuzzService : IFizzBuzzService
 {
     private const string Fizz = "Fizz";
     private const string Buzz = "Buzz";
     private const string FizzBuzz = Fizz + Buzz;
-
-    public static string Compute(int original)
+    
+    public string ComputeFizzBuzz(int original)
+    {
+        return FizzBuzzService.Compute(original);
+    }
+    
+    private static string Compute(int original)
     {
         if(DivisibleBy3(original) && DivisibleBy5(original))
         {

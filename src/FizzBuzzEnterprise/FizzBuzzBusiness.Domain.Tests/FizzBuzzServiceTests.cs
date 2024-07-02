@@ -8,6 +8,11 @@ public class FizzBuzzServiceTests
     private const string Buzz = "Buzz";
     private const string FizzBuzz = "FizzBuzz";
 
+    private FizzBuzzService GetTarget()
+    {
+        return new FizzBuzzService();
+    }
+    
     [Theory]
     [InlineData(1)]
     [InlineData(2)]
@@ -16,7 +21,7 @@ public class FizzBuzzServiceTests
     [InlineData(8)]
     public void GIVEN_number_THEN_return_number_as_string(int original)
     {
-        var result = FizzBuzzService.Compute(original);
+        var result = GetTarget().ComputeFizzBuzz(original);
 
         Check.That(result).IsEqualTo(original.ToString());
     }
@@ -27,7 +32,7 @@ public class FizzBuzzServiceTests
     [InlineData(9)]
     public void GIVEN_divisible_by_3_THEN_return_Fizz(int original)
     {
-        var result = FizzBuzzService.Compute(original);
+        var result = GetTarget().ComputeFizzBuzz(original);
 
         Check.That(result).IsEqualTo(Fizz);
     }
@@ -37,7 +42,7 @@ public class FizzBuzzServiceTests
     [InlineData(10)]
     public void GIVEN_divisible_by_5_THEN_return_Buzz(int original)
     {
-        var result = FizzBuzzService.Compute(original);
+        var result = GetTarget().ComputeFizzBuzz(original);
 
         Check.That(result).IsEqualTo(Buzz);
     }
@@ -48,7 +53,7 @@ public class FizzBuzzServiceTests
     public void GIVEN_divisible_by_3_and_5_THEN_return_FizzBuzz(
         int original)
     {
-        var result = FizzBuzzService.Compute(original);
+        var result = GetTarget().ComputeFizzBuzz(original);
 
         Check.That(result).IsEqualTo(FizzBuzz);
     }
