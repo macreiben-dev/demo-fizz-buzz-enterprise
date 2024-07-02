@@ -9,6 +9,6 @@ public static class ServicesConfiguration
         builderServices.AddMediatR(
             cfg => cfg.RegisterServicesFromAssembly(typeof(FizzBuzzServiceImpl).Assembly));
 
-        builderServices.AddScoped<FizzBuzzServiceImpl>();
+        builderServices.AddScoped<IFizzBuzzServiceImpl, FizzBuzzServiceImpl>();
     }
 }
