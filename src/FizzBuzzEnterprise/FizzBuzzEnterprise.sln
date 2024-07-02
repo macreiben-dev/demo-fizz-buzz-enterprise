@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz.Api", "FizzBuzz.Ap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{D0D99785-03C3-436F-8574-55638D9CD495}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mediatrnoise", "mediatrnoise", "{15A25693-848D-4AB5-B99B-505A68C85043}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "noisy_glue", "noisy_glue", "{15A25693-848D-4AB5-B99B-505A68C85043}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz.Api.Tests", "FizzBuzz.Api.Tests\FizzBuzz.Api.Tests.csproj", "{C6B93577-74CF-480E-89CD-40BD33C3708C}"
 EndProject

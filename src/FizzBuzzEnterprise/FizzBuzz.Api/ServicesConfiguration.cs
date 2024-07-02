@@ -1,3 +1,4 @@
+using FizzBuzzBusiness.Domain.Contracts;
 using FizzBuzzService.Enterprise;
 
 namespace WebApplication1;
@@ -10,5 +11,7 @@ public static class ServicesConfiguration
             cfg => cfg.RegisterServicesFromAssembly(typeof(FizzBuzzServiceContainer).Assembly));
 
         builderServices.AddScoped<IFizzBuzzServiceContainer, FizzBuzzServiceContainer>();
+
+        builderServices.AddScoped<IFizzBuzzService, FizzBuzzBusiness.FizzBuzzService>();
     }
 }
