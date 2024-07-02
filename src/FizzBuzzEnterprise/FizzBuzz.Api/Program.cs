@@ -1,4 +1,4 @@
-using MediatR;
+using WebApplication1;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,5 +20,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
+
+app.MapControllers();
 
 app.Run();

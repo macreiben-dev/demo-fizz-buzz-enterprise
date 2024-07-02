@@ -1,5 +1,7 @@
 using FizzBuzzService.Enterprise;
 
+namespace WebApplication1;
+
 public static class ServicesConfiguration
 {
     public static void Configure(IServiceCollection builderServices)

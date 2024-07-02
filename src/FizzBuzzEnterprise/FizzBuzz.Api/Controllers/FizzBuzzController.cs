@@ -6,7 +6,7 @@ namespace WebApplication1.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class FizzBuzzController
+public class FizzBuzzController : ControllerBase
 {
     private readonly IMediator _mediator;
 
@@ -15,9 +15,8 @@ public class FizzBuzzController
         _mediator = mediator;
     }
     
-    [HttpGet]
-    [Route("compute/{n}")]
-    public string Get(int n)
+    [HttpGet("{n}")]
+    public ActionResult<string> Compute(int n)
     {
         var actual = _mediator.Send(new FizzBuzzRequest(n)).Result;
 
