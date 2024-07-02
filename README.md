@@ -22,9 +22,11 @@ The trick is, you instanciate request - aka events - that you pass to the Mediat
 
 This way, by breaking Dependency inversion principle in the process, one cannot see the controller dependency. You have to look for what handler handles what request.
 
-... and we can happily have a monolithic controller that does everything because we cannot see what the actual dependency are. But the best is that we do not have any reason anymore to split code anymore :P. 
+... and we can happily have a monolithic controller that does everything because we cannot see what the actual dependency are. So we do not have any reason to split code anymore :P - there is just one dependency ! FREEDOM !
 
-That what the mediator design pattern do, it regroup the communication complexity in one place - but was no supposed to hide it.
+That is what the mediator design pattern does. It regroups the communication complexity in one place. 
+
+But it was no supposed to hide "too many dependency code smell" aswell.
 
 #### IoC as orchestrator  
 
